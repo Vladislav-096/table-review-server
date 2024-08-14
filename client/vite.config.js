@@ -1,0 +1,17 @@
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import dsv from '@rollup/plugin-dsv'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react(), dsv()],
+  server: {
+    port: 8085,
+    strictPort: true,
+    host: "0.0.0.0",
+    watch: {
+      usePolling: true,
+      interval: 1000
+    }
+  }
+})

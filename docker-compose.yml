@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  server:
+    build:
+      context: ./server
+    ports:
+      - "3004:3004"
+
+  client:
+    build:
+      context: ./client
+    ports:
+      - "8085:8085"
